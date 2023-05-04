@@ -1,0 +1,10 @@
+
+<div class="container" *ngIf="item.category==item.category&&item.count<=item1.count&&item.category==item1.category&&item.cost>=item1.above&&item.cost<=item1.below">
+    
+    <div class="row" >
+        <div class="col">{{item.id}}</div><div class="col">{{item.item}}</div>|<div class="col">{{item.itemtype}}</div>|<div class="col">{{item.count}}</div>|<div class="col">{{item.category}}</div>|<div class="col">{{item.cost}}</div>
+    </div>
+    <div class="row">
+        <button class="btn btn-warning" [routerLink]="['payment']" [queryParams]="{item:item.item,count:item.count,cost:item.cost}">Order </button>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "email": "sai@gmail.com",
+      "password": "2"
+    }
+  ],
+  "items": [
+    {
+      "itemtype": "BreakFast",
+      "item": "Omlete",
+      "count": 2,
+      "category": "non veg",
+      "cost": 35,
+      "id": 2
+    },
+    {
+      "itemtype": "BreakFast",
+      "item": "Upma",
+      "count": 5,
+      "category": "veg",
+      "cost": 35,
+      "id": 3
+    },
+    {
+      "itemtype": "BreakFast",
+      "item": "ScrambledEgg",
+      "count": 3,
+      "category": "non veg",
+      "cost": 40,
+      "id": 4
+    },
+    {
+      "itemtype": "Lunch",
+      "item": "Chicken Biryani",
+      "count": 13,
+      "category": "non veg",
+      "cost": 130,
+      "id": 5
+    },
+    {
+      "itemtype": "Lunch",
+      "item": "Veg Biryani",
+      "count": 35,
+      "category": "veg",
+      "cost": 100,
+      "id": 6
+    },
+    {
+      "itemtype": "Lunch",
+      "item": "Mutton Biryani",
+      "count": 29,
+      "category": "non veg",
+      "cost": 160,
+      "id": 7
+    },
+    {
+      "itemtype": "Lunch",
+      "item": "Dal Rice",
+      "count": 23,
+      "category": "veg",
+      "cost": 70,
+      "id": 8
+    },
+    {
+      "itemtype": "Dinner",
+      "item": "chapathi veg kurma",
+      "count": 3,
+      "category": "veg",
+      "cost": 50,
+      "id": 9
+    },
+    {
+      "itemtype": "Dinner",
+      "item": "ghee rice",
+      "count": 5,
+      "category": "veg",
+      "cost": 70,
+      "id": 10
+    },
+    {
+      "itemtype": "Dinner",
+      "item": "chapathi-butter chicken",
+      "count": 22,
+      "category": "non veg",
+      "cost": 130,
+      "id": 11
+    },
+    {
+      "itemtype": "Dinner",
+      "item": "White rice- chicken curry",
+      "count": 21,
+      "category": "non veg",
+      "cost": 150,
+      "id": 12
+    },
+    {
+      "itemtype": "Dinner",
+      "item": "Mutton Biryani",
+      "count": 3,
+      "category": "non veg",
+      "cost": 220,
+      "id": 13
+    }
+  ],
+  "user": [
+    {
+      "email": "saikrishna@gmail.com",
+      "password": "12"
+    }
+  ]
+}

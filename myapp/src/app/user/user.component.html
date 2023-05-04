@@ -1,0 +1,37 @@
+
+<div class="container" *ngIf="!navigate">
+  
+    <form (ngSubmit)="onLogin(f)" #f="ngForm">
+      <div class="list-group align-items-center justify-content-center">
+        <h1>User Login</h1>
+        <div class="list-group-item w-50">
+          <label>Email</label
+          ><label class="pl-4">:<input type="text" name="email" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label>Password:</label
+          ><label><input type="password" name="password" ngModel /></label>
+        </div>
+        <div class="list-group-item w-50">
+          <label
+            ><input
+              type="submit"
+              class="btn btn-primary"
+              value="Log in"
+            /> </label
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="list-group align-items-center justify-content-center" *ngIf="navigate" >
+    <h1>Login Successfull</h1>
+    <button class="btn btn-primary" [routerLink]="['userhome']">Go to home</button>
+    </div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alerting">
+      <strong>Invalid Credentials</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+   

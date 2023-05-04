@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+    <h1>Item Details</h1>
+   <strong>Item:</strong> {{item}} |<strong>Count:</strong> {{count}} |<strong>Cost</strong> {{cost}}
+    </div>
+    <form (ngSubmit)="onPay()" #f="ngForm">
+    <div class="list-group">
+        <h1>Payment Details</h1>
+        <div class="list-group-item">
+            <label>Bank Name:</label><input type="text" name="bankname" ngModel required/>
+        </div>
+        <div class="list-group-item">
+            <label>Account No:</label><input type="text" name="accountno" ngModel required/>
+        </div>
+        <div class="list-group-item">
+            <label>IFSC Code:</label><input type="text" name="ifsccode" ngModel required/>
+        </div>
+        <div class="list-group-item">
+                <label class="badge badge-warning pt-1">Payable Amount: {{payableamount}}</label><br>
+            <input class="btn btn-primmary" type="submit" value="Pay:">
+            
+        </div>
+        </div>
+    </form>
+    <div class="alert alert-success" *ngIf="success">
+        <label>Payment Successfull & Order Placed </label><button class="btn btn-primary" [routerLink]="['userhome']">Go to Home</button>
+    </div>
+
+</div>

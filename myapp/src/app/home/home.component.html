@@ -1,0 +1,42 @@
+<app-anavigation></app-anavigation>
+<div class="container align-items-center justify-content-center">
+    <h1 class="text-center">Welcome to Kitchen Story</h1>
+    <form (ngSubmit)="addItem(f)" #f="ngForm" class="align-items-center justify-content-center">
+        <div class="row">
+            <div class="col">
+                Item Type:<input type="text" name="itemtype" ngModel/>
+                Item:<input type="text" name="item" ngModel />Count:<input type="number" name="count" ngModel/>
+                Category:<input type="text" name="category" placeholder="veg or non veg" ngModel/><br>
+                Cost: <input type="number" name="cost" ngModel/>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <input class="btn btn-primary" type="submit" value="Add" />
+            </div>
+        </div>
+       
+    </form>
+    <form (ngSubmit)="onDelete(f1)" #f1="ngForm">
+        <div class="row ">
+            
+                <div class="col">
+                    Enter Id to Delete<input type="number" name="id" ngModel /> <button class="btn btn-danger" >Delete</button>
+                </div>
+           
+        </div>
+      </form>
+</div>
+<div class="container">
+    <h2 class="alert alert-info text-center">List of Available Items</h2>
+    <div class="row">
+        <div class="col">Item Id</div><div class="col">Item </div>|<div class="col">Item Type</div>|<div class="col">Count</div>|<div class="col">Category</div>|<div class="col">Cost</div>
+    </div>
+    <div class="row" *ngFor="let item of items" >
+        <div class="col">{{item.id}}</div><div class="col">{{item.item}}</div>|<div class="col">{{item.itemtype}}</div>|<div class="col">{{item.count}}</div>|<div class="col">{{item.category}}</div>|<div class="col">{{item.cost}}</div>
+    </div>
+    
+</div>
+<div class="col">
+    <router-outlet></router-outlet>
+  </div> 

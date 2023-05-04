@@ -1,0 +1,35 @@
+<app-unavigation></app-unavigation>
+<div class="container align-items-center justify-content-center">
+    <h1 class="text-center">Welcome to Kitchen Story</h1>
+    <form (ngSubmit)="onSearch(f)" #f="ngForm" class="align-items-center justify-content-center">
+        <div class="row">
+            <div class="col">
+                <strong> Item Type:<input type="text" name="itemtype" ngModel /></strong>
+                <strong> Count:<input type="number" name="count" ngModel /></strong>
+                <strong> Category:<input type="text" name="category" placeholder="veg or non veg"
+                        ngModel /><br></strong>
+                <strong> Cost:Above <input type="number" name="above" ngModel />Below <input type="number" name="below"
+                        ngModel /></strong>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3">
+            <div class="col">
+                <input class="btn btn-primary" type="submit" value="Search" />
+            </div>
+        </div>
+
+    </form>
+
+</div>
+<div class="container" *ngIf="search">
+    <h2 class="alert alert-info text-center">List of Available Items</h2>
+    <div class="row">
+        <div class="col">Item Id</div>
+        <div class="col">Item </div>|<div class="col">Item Type</div>|<div class="col">Count</div>|<div class="col">
+            Category</div>|<div class="col">Cost</div>
+    </div>
+    <app-item *ngFor="let item of items" [item]="item" [item1]="item1"></app-item>
+</div>
+<div class="col">
+    <router-outlet></router-outlet>
+  </div> 
